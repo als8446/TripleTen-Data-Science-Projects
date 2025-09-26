@@ -1,42 +1,67 @@
-Perfecto, aquí tienes el README para Project 12 en el mismo formato (primera persona, inglés, listo para pegar):
+# ⭐ Project 12 - Gold Recovery Prediction
+
+## 📌 Project Overview
+
+I developed a machine learning pipeline to predict gold recovery from ore processing data.
+The project involved cleaning and analyzing raw data, handling missing values and anomalies, and training models to predict recovery rates.
+The evaluation metric was sMAPE, which measures relative prediction error.
 
 ⸻
 
-Project 12: Time Series Forecasting for Taxi Orders
+## 🎯 My Objectives
+	•	Load and explore the datasets: gold_recovery_train.csv, gold_recovery_test.csv, gold_recovery_full.csv.
+	•	Verify and compute rougher.output.recovery to ensure correctness.
+	•	Identify missing features in the test set and handle them.
+	•	Preprocess data: handle missing values, remove anomalies, and normalize features.
+	•	Analyze metal concentrations (Au, Ag, Pb) across purification stages.
+	•	Compare particle size distributions between train and test datasets.
+	•	Build a custom function to compute sMAPE.
+	•	Train multiple models, perform cross-validation, and select the best model.
+	•	Evaluate the model on the test dataset and report results.
 
-Project Description
+⸻
 
-As part of the analytics team, my task in this project was to develop a predictive model for time series data in order to forecast the number of taxi orders for the upcoming hour. This prediction allows the company to proactively manage resources, balance driver supply with customer demand, and reduce waiting times.
+## 📂 Dataset Description
 
-The project required me to work with historical data, apply time series analysis techniques, and train regression models to generate reliable forecasts.
+Three datasets are provided:
 
-Objectives
-	•	Analyze historical taxi order data to identify seasonality, trends, and patterns.
-	•	Prepare features such as time-based lags, rolling means, and seasonal indicators.
-	•	Train machine learning models (regression-based) to predict the next-hour demand.
-	•	Evaluate model performance using RMSE and select the most accurate approach.
+File	Description
+gold_recovery_train.csv	Training set with features and targets
+gold_recovery_test.csv	Test set with features only
+gold_recovery_full.csv	Complete dataset containing all features
 
-Key Steps
-	1.	Data Exploration & Preprocessing
-	•	Loaded and cleaned the dataset, handled missing values, and converted timestamps to proper datetime format.
-	•	Conducted exploratory analysis to uncover daily and weekly demand cycles.
-	2.	Feature Engineering
-	•	Created lag features, rolling averages, and encoded cyclical time elements (hour of day, day of week).
-	•	Normalized and scaled the data for optimal model performance.
-	3.	Model Development
-	•	Tested multiple regression algorithms including Linear Regression, Decision Trees, and Gradient Boosting.
-	•	Tuned hyperparameters to improve forecast accuracy.
-	4.	Evaluation & Results
-	•	Selected the best-performing model based on RMSE.
-	•	Demonstrated that the model successfully captured seasonal trends and produced reliable demand forecasts.
+	•	Indexed by date and time.
+	•	Some features are missing in the test set due to later measurement.
+	•	Targets available only in the training set: rougher.output.recovery, final.output.recovery.
 
-Tools & Libraries
-	•	Python
-	•	Pandas, NumPy (data processing)
-	•	Matplotlib, Seaborn (visualizations)
-	•	Scikit-learn (modeling & evaluation)
-	•	Statsmodels (time series analysis)
+⸻
 
-Outcome
+## 🛠️ My Workflow
 
-The final model achieved strong predictive accuracy, providing actionable insights for resource planning. With this solution, the company can better anticipate demand surges and improve operational efficiency by deploying drivers where and when they are most needed.
+1. Data Preparation
+	•	Load CSV files and inspect data for missing values and anomalies.
+	•	Verify rougher.output.recovery calculations and compute mean absolute error.
+	•	Remove or impute missing values and eliminate outliers.
+	•	Normalize and preprocess features for modeling.
+
+2. Exploratory Data Analysis
+	•	Analyze changes in metal concentrations (Au, Ag, Pb) across stages: raw → rougher concentrate → final concentrate.
+	•	Compare particle size distributions between training and test sets.
+	•	Analyze total substance concentrations and remove unrealistic values.
+
+3. Modeling
+	•	Define a function to calculate sMAPE.
+	•	Train multiple regression models: Linear Regression, Random Forest, Gradient Boosting.
+	•	Perform cross-validation and select the model with the lowest sMAPE.
+	•	Validate the model on the test dataset.
+
+4. Reporting
+	•	Present sMAPE and other evaluation metrics for rougher and final recovery.
+	•	Summarize preprocessing steps, anomalies handled, and feature importance.
+	•	Provide insights into model reliability and potential improvements.
+
+⸻
+
+## 📊 Outcome
+
+The model provided accurate predictions of gold recovery rates, demonstrating effective preprocessing, analysis, and predictive modeling on industrial ore processing datasets.
