@@ -1,29 +1,27 @@
 # 📊 Project 01 - Customer Loyalty Program Preparation  
 
 ## 📌 Project Overview  
-The e-commerce company **Store 1** is preparing the launch of a new **Customer Loyalty Program**.  
-To achieve this, the company needs to analyze its customer database and ensure the data is **clean, consistent, and well-organized**.  
+As part of the data analytics team at **Store 1**, my task in the first phase was to **prepare the data for analysis**.  
+The company was launching a new **Customer Loyalty Program** and needed to ensure its customer database was **clean, consistent, and organized**.  
 
-The main objective is to design **personalized campaigns** and **optimize marketing actions** by segmenting customers based on variables such as:  
+The main goal of this phase was to support the design of **personalized marketing campaigns** by segmenting customers based on variables such as:  
 - Age  
 - Purchase history  
 - Product categories purchased  
 
-As part of the analytics team, your task in this first phase is to **prepare the data for analysis**.  
-
 ---
 
-## 🎯 Project Objectives  
+## 🎯 My Objectives  
 - Clean customer profiles.  
 - Standardize names and ages.  
-- Calculate the total spending per customer.  
+- Calculate total spending per customer.  
 - Validate data consistency and correct errors.  
-- Prepare data to generate **business KPIs**.  
+- Prepare the dataset to generate **business KPIs**.  
 
 ---
 
 ## 📂 Dataset Description  
-The dataset is provided as a **Python list** with the following structure:  
+I worked with a dataset provided as a **Python list** with the following structure:  
 
 | Column Name         | Description                                                                 |
 |---------------------|-----------------------------------------------------------------------------|
